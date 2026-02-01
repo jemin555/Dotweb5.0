@@ -3383,6 +3383,9 @@ The program checks whether points lie inside the rectangle.
 
 - It demonstrates **encapsulation**: grouping related data (coordinates, rectangle dimensions) with behaviors (distance, area, contains).  
 
+===============================================================================================
+               UNIT - 6 : CLIB Datastructures  in  Dotweb5.0 Programming Language
+================================================================================================
 
 
 ## ✨ Why Use Structures?
@@ -4565,7 +4568,7 @@ MaskDTS (Root)
 
 ============================================================================================================
 
-                                                                                PIPE  Datastructure  With CLASS
+                            PIPE  Datastructure  With CLASS
 
 =============================================================================================================
 
@@ -4860,7 +4863,7 @@ Display & DisplayO provide structured output and indexed retrieval.
 ===========================================================================================================
 
 
-                                                                                                        EXTEND  DATASTRUCTURE
+                        EXTEND  DATASTRUCTURE
 
 ======================================================================================
 
@@ -5514,7 +5517,7 @@ Iam Age A15
 
 =========================================================================================================
 
-                                                                                                    LARRAY DATASTRUCTURE
+                         LARRAY DATASTRUCTURE
 
 ===============================================================================================================
 
@@ -5875,7 +5878,7 @@ Total Nodes → 11
 
 =============================================================================================
 
-      Basic DataStructures Simillar to  Java for Java Professionals
+   Unit- 7 : Basic DataStructures Simillar to  Java for Java Professionals
 
 ============================================================================================
 
@@ -8301,7 +8304,9 @@ map19 = map19.Merge(map19, "B", " ", 3);
 👉 In short: **Hashtable** is older and locks the whole map, while **ConcurrentHashMap** is modern, faster, 
 and supports atomic operations with fine‑grained concurrency.  
 
-
+===============================================================================================
+               UNIT - 8 : WNOSQLDb connection with Dotweb5.0 Programming Language
+================================================================================================
 
 ===============================================================================================
 
