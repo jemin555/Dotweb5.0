@@ -8433,6 +8433,26 @@ and supports atomic operations with fine‑grained concurrency.
 
 ---
 
+# 📘 Why Wnosql DB is Lightweight Compared to PostgreSQL
+
+- **Memory Limitation**:  
+  We **cannot load 1 terabyte of data directly into memory** — traditional RDBMS like PostgreSQL rely heavily on structured schemas and memory‑intensive operations, which makes them heavier when handling massive datasets.  
+
+- **Wnosql DB Advantage**:  
+  - **Lightweight** → Wnosql DB is designed to be less memory‑intensive.  
+  - **Clustered Storage** → Instead of loading everything into one machine’s memory, Wnosql DB **splits big data across clusters**.  
+  - **Scalable** → It can handle **terabytes or even petabytes** depending on hardware, without overwhelming a single node.  
+  - **Flexible Models** → Supports schema‑less storage, key‑value, columnar, graph, and even row/column formats, making it adaptable to different workloads.  
+
+---
+
+# 🎯 Refined Statement
+
+👉 *“Because we can’t load 1 terabyte directly into memory, PostgreSQL struggles with massive datasets. Wnosql DB, 
+however, is lightweight and cluster‑based, allowing big data to be distributed across nodes.
+This makes it more scalable and efficient for handling terabytes or more, depending on hardware capacity.”*
+
+
 ===============================================================================================
 
 Note: This  Tutorial  website  is  under construction
