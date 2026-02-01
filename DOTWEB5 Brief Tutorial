@@ -8452,7 +8452,57 @@ and supports atomic operations with fine‑grained concurrency.
 however, is lightweight and cluster‑based, allowing big data to be distributed across nodes.
 This makes it more scalable and efficient for handling terabytes or more, depending on hardware capacity.”*
 
+=====================================================================================================
+ 
 
+
+# ✨ Write a Dotweb5.0 Program example about FileHandling.
+
+```
+
+<WEB>
+
+<USE> file; // Load file handling packages using Java 7.0 libraries
+
+<PACK> Program8
+{
+    <CLASS> Prog
+    {
+        public void main()
+        {
+            // Step 1: Define a character array containing the letters 'b', 'a', 'g'
+            char[] data = new char[]{ 'b', 'a', 'g' };
+
+            // Step 2: Write the character array into the file "out7.txt"
+            // Additional parameters specify related files ("out1.txt", "out2.txt"),
+            // a label ("OAK"), and index positions (0 to 2)
+            JFileWriter.Write("out7.txt", data, "out1.txt", "out2.txt", "OAK", 0, 2);
+
+            // Step 3: Read the contents of "out7.txt"
+            // The second parameter (3) indicates the number of characters to read
+            JFileReader.Read("out7.txt", 3);
+
+            // -------------------------------
+            // Expected Output Trace:
+            // Step 1 → Write characters: bag
+            // Step 2 → Read file "out7.txt"
+            // Step 3 → Display result:
+            // bag
+            // -------------------------------
+        }
+    }
+}
+```
+
+---
+
+# 🎯 Final Output
+
+```
+bag
+```
+
+=====================================================================================================
 ===============================================================================================
 
 Note: This  Tutorial  website  is  under construction
