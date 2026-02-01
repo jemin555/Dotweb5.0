@@ -8915,10 +8915,164 @@ Both DotWeb5.0 and Java recognize similar categories:
 ---
 
 ==============================================================================================
-
+             
+                       OAKJAVA7C compiler with DOTWEB5.0 
 
 ===============================================================================================
 
-Note: This  Tutorial  website  is  under construction
+
+
+⚡ Here a private class that cannot be accessed by any Java code. When compiled, it generates a `.class` file.
+The compiler used is **oakjava7c**. We can compile an `.oakjava7` program using the **oakjava7c** compiler.
+
+👉To run this kind of program, you use the OakJava7 interpreter, for example:
+
+```
+java <filename>
+```
+
+👉Below is the OakJava7 program:
+
+```oakjava
+class Oakjava7Prog
+{
+    public Oakjava7Prog()
+    {
+        super();
+    }
+
+    public String j7String(String obj)
+    {
+        return obj;
+    }
+
+    public void main()
+    {
+        print(j7String("wilmix"));
+    }
+}
+```
+
+---
+
+👉 Compilation Output
+
+When compiled, the following messages are displayed:
+
+```
+oakjava7c J7String.oakjava7
+Jemin Information Technology Copyright 2022
+Compiling your OakJava7 (JAVA7.0) program, please wait......
+Finished Compiling - no errors.
+Process complete - 0 errors
+Process completed.
+Generated .wl class file J7String.class
+```
+
+---
+
+### ✅ Execution Output
+When running the program using:
+
+```
+java J7String
+```
+
+The output displayed is:
+
+```
+wilmix
+```
+
+---
+
+
+
+👉 Writing Your First Program using oakjava7 for Dotweb5.0
+
+Create a file named **J7String.oakjava7** with the following code:
+
+```oakjava
+class Oakjava7Prog
+{
+    public Oakjava7Prog()
+    {
+        super();
+    }
+
+    public String j7String(String obj)
+    {
+        return obj;
+    }
+
+    public void main()
+    {
+        print(j7String("wilmix"));
+    }
+}
+```
+
+👉 Explanation
+- `class Oakjava7Prog` → Defines the class.  
+- `Oakjava7Prog()` → Constructor that calls the superclass constructor.  
+- `j7String(String obj)` → A method that returns the string passed to it.  
+- `main()` → Entry point of the program. It prints the result of `j7String("wilmix")`.  
+
+---
+
+👉 Compiling the Program
+
+Use the OakJava7 compiler:
+
+```
+oakjava7c J7String.oakjava7
+```
+
+👉 Sample Compiler Output
+```
+oakjava7c J7String.oakjava7
+Jemin Information Technology Copyright 2022
+Compiling your OakJava7 (JAVA7.0) program, please wait......
+Finished Compiling - no errors.
+Process complete - 0 errors
+Process completed.
+Generated .wl class file J7String.class
+```
+
+---
+
+👉 Running the Program
+Run the program using the OakJava interpreter:
+
+```
+java J7String
+```
+
+### ✅ Output
+```
+wilmix
+```
+
+---
+
+👉 Notes
+
+- OakJava7 generates `.class` files that are executed by the OakJava interpreter.  
+- This OakJava7 .class is  different from Java class file.
+- The syntax is similar to Java but streamlined for OakJava’s environment.  
+- You will learn more about OakJava7’s compiler and its applications in **web application samples**.  
+- OakJava7 complier is  used with Dotweb5.0 compiler.
+
+
+
+**Note:** You will learn more about this compiler and its usage in web application samples.  
+==================================================================================================
+
+
+
+
+
+
+
 
 
