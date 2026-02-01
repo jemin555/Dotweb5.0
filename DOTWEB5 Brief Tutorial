@@ -7306,6 +7306,136 @@ Size after clear: 0
 - The **J7Hashtable program** demonstrates key operations: **put, containsKey, containsValue, clone, equals, clear, size**.  
 - It shows how a hashtable manages **fast lookups** using keys and supports cloning and equality checks.  
 - After clearing, the table becomes empty, confirming the **dynamic nature** of hashtables.  
+==============================================================================================
+
+
+---
+
+# 📘 What is a TreeSet?
+
+- A **TreeSet** is a **sorted set** that stores unique elements in **ascending or descending order**.  
+- It is typically backed by a **balanced binary search tree**, ensuring efficient operations.  
+- It automatically maintains **order** and prevents duplicates.  
+
+---
+
+# 📝 Definition of TreeSet
+
+A **TreeSet** supports:  
+- **add(x)** → Insert element `x`.  
+- **ASCDisplay() / DESCDisplay()** → Show elements in ascending or descending order.  
+- **higher(x)** → Returns the least element strictly greater than `x`.  
+- **lower(x)** → Returns the greatest element strictly less than `x`.  
+- **highest() / lowest()** → Returns maximum or minimum element.  
+- **pollFirst() / pollLast()** → Removes and returns the first or last element.  
+- **contains(x)** → Checks if an element exists.  
+- **removeall()** → Clears all elements.  
+
+---
+
+# ⚙️ Dotweb5.0 TreeSet Program Explained
+
+```
+<PRINTLN>("-------------------------------------------------------");
+<PRINTLN>("                 TREE SET  DETAILS                     ");
+<PRINTLN>("-------------------------------------------------------");
+
+// Create TreeSet with ASC order (Strings)
+OJ7Lib.TreeSet treeset = new OJ7Lib.TreeSet("ASC");
+    treeset.add("minister");
+    treeset.add("master");
+    treeset.add("cad");
+    treeset.add("phd");
+
+// Create TreeSet with capacity (Integers)
+OJ7Lib.TreeSet treeset1 = new OJ7Lib.TreeSet(5);
+    treeset1.add(13);
+    treeset1.add(15);
+    treeset1.add(12);
+    treeset1.add(1);
+
+// Display elements in ASC order
+<PRINTLN>("ASC: " + treeset1.ASCDisplay());
+
+// Find higher and lower elements
+<PRINTLN>("higher= " + treeset1.higher(13));
+<PRINTLN>("lower= " + treeset1.lower(17));
+
+// Find highest and lowest elements
+<PRINTLN>("last= " + treeset1.highest());
+<PRINTLN>("first= " + treeset1.lowest());
+
+// Poll first and last elements
+<PRINTLN>("PollFirst= " + treeset1.pollFirst());
+<PRINTLN>("PollLast= " + treeset1.pollLast());
+
+// Display elements in DESC order
+<PRINTLN>("DESC: " + treeset1.DESCDisplay());
+
+// Check if element exists
+<PRINTLN>("Contains 151? " + treeset1.list.contains(151));
+
+// Remove all elements
+treeset1.removeall();
+<PRINTLN>("After removeAll: " + treeset1.list.isEmpty());
+```
+
+---
+
+# ✅ Step‑by‑Step Explanation
+
+1. **Create TreeSet (Strings)**  
+   - Stores `"minister"`, `"master"`, `"cad"`, `"phd"` in ascending order.  
+
+2. **Create TreeSet (Integers)**  
+   - Stores `13, 15, 12, 1`.  
+
+3. **ASCDisplay()**  
+   - Shows elements sorted ascending → `[1, 12, 13, 15]`.  
+
+4. **higher(13)**  
+   - Finds the next greater element after `13` → `15`.  
+
+5. **lower(17)**  
+   - Finds the greatest element less than `17` → `15`.  
+
+6. **highest() / lowest()**  
+   - Highest element → `15`.  
+   - Lowest element → `1`.  
+
+7. **pollFirst() / pollLast()**  
+   - Removes and returns first (`1`) and last (`15`).  
+
+8. **DESCDisplay()**  
+   - Shows remaining elements in descending order → `[13, 12]`.  
+
+9. **contains(151)**  
+   - Checks if `151` exists → `false`.  
+
+10. **removeall()**  
+    - Clears all elements.  
+    - `isEmpty()` → `true`.  
+
+---
+
+# 🎯 Final Output (Step by Step)
+
+```
+-------------------------------------------------------
+                 TREE SET  DETAILS                     
+-------------------------------------------------------
+ASC: [1, 12, 13, 15]
+higher= 15
+lower= 15
+last= 15
+first= 1
+PollFirst= 1
+PollLast= 15
+DESC: [13, 12]
+Contains 151? false
+After removeAll: true
+```
+
 
 ---
 
