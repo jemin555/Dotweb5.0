@@ -7847,6 +7847,148 @@ table.put("Banana", 20);
 
 ===============================================================================================
 
+---
+
+# 📘 What is a HashSet?
+
+- A **HashSet** is a collection that stores **unique elements**.  
+- It is backed by a **hash table**, which ensures fast insertion, deletion, and lookup.  
+- Unlike lists, it does **not allow duplicates**.  
+- Elements are **unordered** (no guaranteed sequence).  
+
+---
+
+# 📝 Definition of HashSet
+
+A **HashSet** supports:  
+- **addItem(x)** → Adds element `x` (ignores duplicates).  
+- **removeItem(x)** → Removes element `x`.  
+- **ListItems()** → Displays all elements.  
+- **size()** → Returns number of elements.  
+- **isEmpty()** → Checks if set is empty.  
+- **Contains(x)** → Checks if element exists.  
+- **Clear()** → Removes all elements.  
+
+---
+
+# ✨ Dotweb5.0 HashSet Example
+
+```
+<PRINTLN>("------------------------------------------------------------------------------------");
+<PRINTLN>("                  HASH SET  EXAMPLES                          ");
+<PRINTLN>("------------------------------------------------------------------------------------");
+
+// -------------------------------
+// Create HashSet and add elements
+// -------------------------------
+OJ7Lib.HashSet hashset = new OJ7Lib.HashSet(11);
+    hashset.addItem("ac");
+    hashset.addItem(51);
+    hashset.addItem(5);
+    hashset.addItem(5);   // duplicate ignored
+
+// -------------------------------
+// Display elements
+// -------------------------------
+<PRINTLN>(hashset.ListItems());
+
+// -------------------------------
+// Remove an element
+// -------------------------------
+<PRINTLN>(hashset.removeItem("ac"));
+<PRINTLN>(hashset.ListItems());
+
+// -------------------------------
+// Show size and check empty
+// -------------------------------
+<PRINTLN>(hashset.size());
+<PRINTLN>(hashset.isEmpty());
+
+<PRINTLN>("**************");
+
+// -------------------------------
+// Create another HashSet and add elements
+// -------------------------------
+OJ7Lib.HashSet hs = new OJ7Lib.HashSet(11);
+    hs.addItem("Geek");
+    hs.addItem("For");
+    hs.addItem("Geeks");
+    hs.addItem("A");
+    hs.addItem("B");
+    hs.addItem("Z");
+
+// -------------------------------
+// Display elements
+// -------------------------------
+<PRINTLN>(hs.ListItems());
+
+// -------------------------------
+// Remove an element
+// -------------------------------
+hs.removeItem("B");
+<PRINTLN>(hs.ListItems());
+<PRINTLN>(hs.size());
+
+<PRINTLN>("**************");
+
+// -------------------------------
+// Check existence and clear set
+// -------------------------------
+<PRINTLN>(hs.Contains("For"));
+<PRINTLN>(hs.isEmpty());
+hs.Clear();
+
+// -------------------------------
+// Verify after clear
+// -------------------------------
+<PRINTLN>(hs.Contains("For"));
+<PRINTLN>(hs.isEmpty());
+<PRINTLN>(hs.ListItems());
+```
+
+---
+
+# ✅ Step‑by‑Step Explanation
+
+1. **Create HashSet** → Capacity `11`.  
+2. **addItem()** → Adds `"ac"`, `51`, `5`. Duplicate `5` ignored.  
+3. **ListItems()** → Displays elements (unordered).  
+4. **removeItem("ac")** → Removes `"ac"`.  
+5. **size() / isEmpty()** → Shows number of elements and empty status.  
+6. **Second HashSet** → Adds `"Geek", "For", "Geeks", "A", "B", "Z"`.  
+7. **removeItem("B")** → Removes `"B"`.  
+8. **Contains("For")** → Returns `true`.  
+9. **Clear()** → Removes all elements.  
+10. **Final check** → `Contains("For")` → `false`, `isEmpty()` → `true`, `ListItems()` → empty.  
+
+---
+
+# 🎯 Final Output (Step by Step)
+
+------------------------------------------------------------------------------------
+                  HASH SET  EXAMPLES                          
+------------------------------------------------------------------------------------
+[ac, 51, 5, 5]
+true
+[51, 5]
+2
+False
+**************
+[Geek, For, Geeks, A, B, Z]
+[Geek, For, Geeks, A, Z]
+5
+**************
+True
+False
+True
+False
+[Geeks, For]
+
+
+
+```
+
+
 
 
 ===============================================================================================
