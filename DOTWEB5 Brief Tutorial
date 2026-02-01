@@ -6678,7 +6678,418 @@ true // contains(7)
 # 🎯 Conclusion
 
 - The **Dotweb5.0 stack code** demonstrates all major stack operations: **push, pop, peek, contains, elementAt, size, removeElementAt, removeAllElements**.  
-- It shows how a stack maintains **LIFO order** while still allowing extra operations like removing by index or clearing all elements.  
+- It shows how a stack maintains **LIFO order** while still allowing extra operations like removing by index or clearing all elements. 
+
+  =================================================================0
+
+# 📘 What is a Queue?
+
+- A **queue** is a **linear data structure** that follows the **FIFO (First In, First Out)** principle.  
+- This means the **first element inserted** into the queue will be the **first one removed**.  
+- Think of a line at a ticket counter: the person who comes first is served first.  
+
+---
+
+# 📝 Definition of Queue
+
+A **queue** is defined as a collection of elements with two primary operations:
+- **enqueue** → Adds an element to the rear (end) of the queue.  
+- **dequeue** → Removes the element from the front of the queue.  
+
+Additional operations often include:
+- **peek()** → Views the front element without removing it.  
+- **size()** → Returns the number of elements in the queue.  
+- **display()** → Shows all elements in the queue.  
+
+---
+
+# ⚙️ Dotweb5.0 LinkedQueue Example Code Explained
+
+Here’s your code, explained step by step:
+
+```Dotweb5.0
+OJ7Lib.LinkedListQueue q3 = new OJ7Lib.LinkedListQueue();
+```
+- Creates a new **LinkedQueue object** `q3`.
+
+---
+
+### 1. Enqueue Operations
+```Dotweb5.0
+q3.enqueue(10);
+q3.enqueue(20);
+q3.enqueue(30);
+q3.enqueue(40);
+```
+- Adds elements `10, 20, 30, 40` to the queue in order.  
+- Current queue (front → rear): **10, 20, 30, 40**
+
+---
+
+### 2. Display Queue
+```Dotweb5.0
+q3.display();
+```
+- Prints all elements in the queue.  
+- Output: `10 20 30 40`
+
+---
+
+### 3. Peek Front Element
+```Dotweb5.0
+<PRINTLN>("Front element: " + q3.peek());
+```
+- Shows the front element without removing it.  
+- Output: `Front element: 10`
+
+---
+
+### 4. Dequeue Operation
+```Dotweb5.0
+q3.dequeue();
+```
+- Removes the front element (`10`).  
+- Current queue: **20, 30, 40**
+
+---
+
+### 5. Display Queue Again
+```Dotweb5.0
+q3.display();
+```
+- Prints the updated queue.  
+- Output: `20 30 40`
+
+---
+
+### 6. Queue Size
+```Dotweb5.0
+<PRINTLN>("Queue size: " + q3.size());
+```
+- Returns the number of elements in the queue.  
+- Output: `Queue size: 3`
+
+---
+
+✨ Dotweb5.0 LinkedQueue example code
+
+<PRINTLN>("------------------------------------------------------------------------------------");
+<PRINTLN>("                 LinkedQueue  EXAMPLES                          ");
+<PRINTLN>("------------------------------------------------------------------------------------");
+
+OJ7Lib.LinkedListQueue q3 = new OJ7Lib.LinkedListQueue();
+
+    // -------------------------------
+    // Enqueue elements into the queue
+    // -------------------------------
+    q3.enqueue(10);
+    q3.enqueue(20);
+    q3.enqueue(30);
+    q3.enqueue(40);
+
+    // -------------------------------
+    // Display current queue
+    // -------------------------------
+    q3.display();
+
+    // -------------------------------
+    // Peek at the front element
+    // -------------------------------
+    <PRINTLN>("Front element: " + q3.peek());
+
+    // -------------------------------
+    // Dequeue one element
+    // -------------------------------
+    q3.dequeue();
+
+    // -------------------------------
+    // Display updated queue
+    // -------------------------------
+    q3.display();
+
+    // -------------------------------
+    // Show current size
+    // -------------------------------
+    <PRINTLN>("Queue size: " + q3.size());
+
+
+# ✅ Final Output (Step by Step)
+
+------------------------------------------------------------------------------------
+                 LinkedQueue  EXAMPLES                          
+------------------------------------------------------------------------------------
+10 20 30 40
+Front element: 10
+20 30 40
+Queue size: 3
+```
+
+---
+
+# 🎯 Conclusion
+
+- The **LinkedQueue example** demonstrates the **FIFO principle** clearly.  
+- Operations shown: **enqueue, dequeue, peek, display, size**.  
+- It highlights how a queue differs from a stack:  
+  - **Stack → LIFO (last in, first out)**  
+  - **Queue → FIFO (first in, first out)**  
+
+---
+
+# 📘 Stack vs LinkedQueue
+
+## 🔑 Core Principle
+- **Stack** → **LIFO (Last In, First Out)**  
+  - The last element pushed is the first one popped.  
+- **LinkedQueue** → **FIFO (First In, First Out)**  
+  - The first element enqueued is the first one dequeued.  
+
+---
+
+## ⚙️ Operations
+
+| Operation | Stack | LinkedQueue |
+|-----------|-------|-------------|
+| **Insert** | `push()` → adds element to the **top** | `enqueue()` → adds element to the **rear** |
+| **Remove** | `pop()` → removes element from the **top** | `dequeue()` → removes element from the **front** |
+| **Peek** | `peek()` → views the **top** element | `peek()` → views the **front** element |
+| **Traversal** | From top to bottom | From front to rear |
+
+---
+
+## 📊 Behavior Example
+
+### Stack (LIFO)
+```Dotweb5.0
+Stack s = new Stack();
+s.push(1);
+s.push(2);
+s.push(3);
+System.out.println(s.pop()); // 3
+```
+- Output: `3` (last in, first out)
+
+### LinkedQueue (FIFO)
+```Dotweb5.0
+LinkedQueue q = new LinkedQueue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+System.out.println(q.dequeue()); // 1
+```
+- Output: `1` (first in, first out)
+
+---
+
+## 🏗️ Implementation
+- **Stack**: Can be implemented using arrays or linked lists.  
+- **LinkedQueue**: Typically implemented using linked lists (nodes with pointers to next).  
+
+---
+
+## 📌 Use Cases
+- **Stack**:  
+  - Undo/Redo functionality  
+  - Expression evaluation (postfix/prefix)  
+  - Backtracking algorithms  
+
+- **LinkedQueue**:  
+  - Scheduling tasks  
+  - Order processing systems  
+  - Breadth-first search (BFS) in graphs  
+
+---
+
+# 🎯 Conclusion
+- **Stack** is about handling the **latest item first** (LIFO).  
+- **LinkedQueue** is about handling the **earliest item first** (FIFO).  
+- Both are fundamental data structures but serve **different logical needs** in programming.  
+===============================================================================================
+
+
+---
+
+# 📘 What is J7Queue?
+
+- **J7Queue** is a queue implementation provided in the Dotweb5.0 library (`OJ7Lib`).  
+- It follows the **FIFO (First In, First Out)** principle: the first element inserted is the first one removed.  
+- It supports standard queue operations such as **enqueue, dequeue, peek, size, and isEmpty**.  
+
+---
+
+# 📝 Definition of Queue (J7Queue)
+
+A **queue** is a linear data structure with these operations:
+- **enqueue(x)** → Adds element `x` to the rear of the queue.  
+- **dequeue() / j7dequeue()** → Removes the front element.  
+- **peek()** → Views the front element without removing it.  
+- **size()** → Returns the number of elements in the queue.  
+- **isEmpty()** → Checks if the queue has no elements.  
+
+---
+
+# ⚙️ Dotweb5.0 J7Queue Example Code Explained
+
+Here’s the code, explained step by step:
+
+```Dotweb5.0
+OJ7Lib.J7Queue q = new OJ7Lib.J7Queue(5);
+```
+- Creates a **J7Queue object** `q` with capacity `5`.
+
+---
+
+### 1. Enqueue Operations
+```Dotweb5.0
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+q.enqueue(4);
+```
+- Adds elements `1, 2, 3, 4` to the queue.  
+- Current queue (front → rear): **1, 2, 3, 4**
+
+---
+
+### 2. Peek Front Element
+```Dotweb5.0
+<PRINTLN>("Front element is: " + q.peek());
+```
+- Shows the front element without removing it.  
+- Output: `Front element is: 1`
+
+---
+
+### 3. Dequeue Operation
+```Dotweb5.0
+q.j7dequeue();
+<PRINTLN>("Front element is: " + q.peek());
+```
+- Removes the front element (`1`).  
+- New front element is `2`.  
+- Output: `Front element is: 2`
+
+---
+
+### 4. Queue Size
+```Dotweb5.0
+<PRINTLN>("Queue size is " + q.size());
+```
+- Returns the number of elements currently in the queue.  
+- Output: `Queue size is 3`
+
+---
+
+### 5. Multiple Dequeues
+```Dotweb5.0
+q.j7dequeue();
+q.j7dequeue();
+q.j7dequeue();
+```
+- Removes `2, 3, 4` sequentially.  
+- Queue becomes empty.
+
+---
+
+### 6. Enqueue Again
+```Dotweb5.0
+q.enqueue(1123);
+<PRINTLN>("Front element is: " + q.peek());
+```
+- Adds `1123` to the queue.  
+- Front element is now `1123`.  
+- Output: `Front element is: 1123`
+
+---
+
+### 7. Check Empty Status
+```Dotweb5.0
+if (q.isEmpty())
+    <PRINTLN>("Queue is empty");
+else
+    <PRINTLN>("Queue is not empty");
+```
+- Since `1123` is present, the queue is **not empty**.  
+- Output: `Queue is not empty`
+---
+✨ J7Queue Example Code
+
+// -----------------------------------------------------------------------------
+//                          J7Queue EXAMPLES
+// -----------------------------------------------------------------------------
+
+<PRINTLN>("------------------------------------------------------------------------------------");
+<PRINTLN>("                 J7Queue  EXAMPLES                          ");
+<PRINTLN>("------------------------------------------------------------------------------------");
+
+OJ7Lib.J7Queue q = new OJ7Lib.J7Queue(5);
+
+    // -------------------------------
+    // Enqueue elements into the queue
+    // -------------------------------
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.enqueue(4);
+
+    <PRINTLN>("Front element is: " + q.peek());
+
+    // -------------------------------
+    // Dequeue one element
+    // -------------------------------
+    q.j7dequeue();
+    <PRINTLN>("Front element is: " + q.peek());
+
+    // -------------------------------
+    // Show current size
+    // -------------------------------
+    <PRINTLN>("Queue size is: " + q.size());
+
+    // -------------------------------
+    // Remove all remaining elements
+    // -------------------------------
+    q.j7dequeue();
+    q.j7dequeue();
+    q.j7dequeue();
+
+    // -------------------------------
+    // Enqueue a new element
+    // -------------------------------
+    q.enqueue(1123);
+    <PRINTLN>("Front element is: " + q.peek());
+
+    // -------------------------------
+    // Check if queue is empty
+    // -------------------------------
+    if (q.isEmpty())
+        <PRINTLN>("Queue is empty");
+    else
+        <PRINTLN>("Queue is not empty");
+
+# ✅ Final Output (Step by Step)
+
+```
+------------------------------------------------------------------------------------
+                 J7Queue  EXAMPLES                          
+------------------------------------------------------------------------------------
+Front element is: 1
+Front element is: 2
+Queue size is 3
+Front element is: 1123
+Queue is not empty
+```
+
+---
+
+# 🎯 Conclusion
+
+- The **J7Queue example** demonstrates the **FIFO principle** clearly.  
+- Operations shown: **enqueue, dequeue, peek, size, isEmpty**.  
+- It highlights how J7Queue manages elements in order, ensuring the earliest enqueued item is always served first.  
+
+---
+
+
 
 
 ===============================================================================================
