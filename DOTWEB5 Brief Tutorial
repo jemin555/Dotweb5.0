@@ -8503,6 +8503,185 @@ bag
 ```
 
 =====================================================================================================
+                      
+                       Dotweb5.0  With Encryption ad Decryption
+
+===============================================================================================
+
+
+---
+
+# 📘 What is Encryption?
+
+- **Encryption** is the process of **converting readable data (plaintext)** into an **unreadable format (ciphertext)** using an algorithm.  
+- Purpose: Protect sensitive information so that only authorized users can access it.  
+- Example: `"dog is chasing cat"` → `"XyZ@#12..."` (encrypted form).  
+
+---
+
+# 📘 What is Decryption?
+
+- **Decryption** is the reverse process: converting **ciphertext back into plaintext** using the correct key or algorithm.  
+- Purpose: Allow authorized users to read the original data.  
+- Example: `"XyZ@#12..."` → `"dog is chasing cat"`.  
+
+---
+
+# ⚙️ How Dotweb5.0 is Used for Encryption/Decryption
+
+- Dotweb5.0 provides **security libraries** (`j7security.Ojava7Process`) with built‑in methods for encryption and decryption.  
+- **`j7Encrypt()`** → Encrypts the given text.  
+- **`Decrypt()`** → Decrypts the previously encrypted text.  
+- This allows developers to secure data directly inside Dotweb5.0 programs without writing low‑level cryptographic code.  
+
+---
+
+# ✨ Dotweb5.0 Program (EncryptDecrypt.web)
+
+```
+<WEB>
+
+<PACK> j7security1
+{
+    <CLASS> Prog
+    {
+        public void main()
+        {
+            // Display HTML header with background color
+            <PRINTLN>("<html><body bgcolor=gold");
+
+            // Step 1: Encrypt text using Dotweb5.0 security function
+            string sop = j7security.Ojava7Process.j7Encrypt(
+                "wilmix is going1 ,  cat is going ,  dog is chasing cat"
+            );
+
+            // Step 2: Print the encrypted format
+            <PRINTLN>("Encrypt=" + sop);
+            <PRINTLN>("<BR><BR><BR><BR><BR><BR>");
+
+            <PRINTLN>("------------------------------------------------------------");
+            <PRINTLN>("------------------------------------------------------------");
+            <PRINTLN>("<BR><BR>");
+
+            // Step 3: Encrypt another text
+            string sop1 = j7security.Ojava7Process.j7Encrypt(
+                "wilmix is going ,  cat is going ,  dog is chasing cat"
+            );
+
+            // Step 4: Print the encrypted format
+            <PRINTLN>("Encrypt=" + sop1);
+            <PRINTLN>("<BR><BR><BR><BR>");
+
+            // Step 5: Decrypt the text using Dotweb5.0 security function
+            <PRINTLN>("Decrypt=" + j7security.Ojava7Process.Decrypt());
+            <PRINTLN>("<BR><BR><BR><BR>");
+
+            // Close HTML body
+            <PRINTLN>("</body></html>");
+            <PRINTLN>("------------------------------------------------------------");
+        }
+    }
+}
+```
+
+---
+
+# 🎯 Step‑by‑Step Explanation
+
+1. **Encrypt text** → `j7Encrypt()` converts plaintext into ciphertext.  
+2. **Print encrypted output** → Shows unreadable secured format.  
+3. **Encrypt another text** → Demonstrates multiple encryption calls.  
+4. **Decrypt text** → `Decrypt()` restores original readable data.  
+5. **Output formatting** → HTML tags used for display in browser.  
+
+---
+
+# ✅ Final Output (Simplified)
+
+```
+Encrypt= [Encrypted string of first text]
+------------------------------------------------------------
+Encrypt= [Encrypted string of second text]
+Decrypt= wilmix is going ,  cat is going ,  dog is chasing cat
+------------------------------------------------------------
+```
+
+---
+
+# 🌟 Summary
+
+- **Encryption** → Protects data by converting it into unreadable form.  
+- **Decryption** → Restores original readable data.  
+- **Dotweb5.0** → Provides built‑in security functions (`j7Encrypt`, `Decrypt`) to make encryption/decryption easy for developers.  
+
+
+# 📘 Why the Output Looks Like Random Symbols
+
+- When you call **`j7security.Ojava7Process.j7Encrypt()`**, the function converts your readable text (plaintext) into **ciphertext**.  
+- Ciphertext is **not meant to be human‑readable** — it appears as random characters, symbols, and control codes.  
+- That’s exactly what you’re seeing in your output:  
+
+```
+<html><body bgcolor=gold
+Encrypt=V?n?$>;????I?'%?s7X ...
+```
+
+This is the **encrypted representation** of your original string:  
+`"wilmix is going1 , cat is going , dog is chasing cat"`
+
+---
+
+# ⚙️ Program Flow Recap
+
+1. **Input Plaintext** → `"wilmix is going1 , cat is going , dog is chasing cat"`  
+2. **Encryption** → `j7Encrypt()` converts it into unreadable ciphertext (random symbols).  
+3. **Output** → Printed inside HTML with gold background.  
+4. **Decryption** → Later, calling `Decrypt()` restores the original readable text.  
+
+---
+
+# 🎯 Final Output (Simplified Trace)
+
+```
+<html><body bgcolor=gold
+Encrypt= [Ciphertext with random symbols]
+------------------------------------------------------------
+Encrypt= [Ciphertext with random symbols]
+Decrypt= wilmix is going ,  cat is going ,  dog is chasing cat
+------------------------------------------------------------
+</body></html>
+```
+
+---
+
+# 🌟 Key Takeaway
+
+- **Encryption Output** → Random symbols (ciphertext).  
+- **Decryption Output** → Original readable text.  
+- Dotweb5.0 makes this process simple by providing built‑in functions (`j7Encrypt`, `Decrypt`) so you don’t need to implement cryptographic algorithms manually.  
+
+---
+
+---
+
+# 📘 Plaintext → Ciphertext → Decrypted Text
+
+| Stage        | Description | Example Output |
+|--------------|-------------|----------------|
+| **Plaintext (Input)** | The original readable message you pass into the program. | `wilmix is going , cat is going , dog is chasing cat` |
+| **Ciphertext (Encryption)** | The unreadable, scrambled format produced by `j7security.Ojava7Process.j7Encrypt()`. Appears as random symbols and characters. | `V?n?$>;????I?'%?s7X...?` *(example from your program output)* |
+| **Decrypted Text (Output)** | The restored readable message produced by `j7security.Ojava7Process.Decrypt()`. | `wilmix is going , cat is going , dog is chasing cat` |
+
+---
+
+# 🎯 Key Takeaway
+
+- **Encryption** → Converts plaintext into ciphertext (random symbols).  
+- **Decryption** → Converts ciphertext back into the original plaintext.  
+- **Dotweb5.0** → Simplifies this process with built‑in functions (`j7Encrypt`, `Decrypt`) so developers don’t need to implement cryptographic algorithms manually.  
+
+
+
 ===============================================================================================
 
 Note: This  Tutorial  website  is  under construction
