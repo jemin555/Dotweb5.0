@@ -7140,8 +7140,174 @@ Queue is not empty
 
 ---
 
+===============================================================================================
 
 
+---
+
+# 📘 What is a J7Hashtable?
+
+- A **J7Hashtable** is a data structure that stores elements in **key–value pairs**.  
+- It uses **hashing** to compute an index into an array of buckets, from which the desired value can be found.  
+- Keys are unique, and each key maps to exactly one value.  
+- It provides **fast access (average O(1))** for insertion, deletion, and lookup.  
+
+---
+
+# 📝 Definition of J7Hashtable
+
+A **Hashtable** is defined as:  
+- A collection of **key-value pairs**.  
+- **put(key, value)** → Inserts a mapping into the table.  
+- **get(key)** → Retrieves the value for a given key.  
+- **containsKey(key)** → Checks if a key exists.  
+- **containsValue(value)** → Checks if a value exists.  
+- **remove(key)** → Removes a key-value pair.  
+- **size()** → Returns the number of entries.  
+- **clear()** → Removes all entries.  
+- **clone()** → Creates a shallow copy of the hashtable.  
+- **equals()** → Compares two hashtables for equality.  
+
+---
+
+# ⚙️ Dotweb5.0 J7Hashtable Example Code Explained
+
+```
+<PRINTLN>("-------------------------------------------------------");
+<PRINTLN>("              HASHTABLE                              ");
+<PRINTLN>("-------------------------------------------------------");
+
+OJ7Lib.J7HashTable table = new OJ7Lib.J7HashTable();
+```
+- Creates a new **J7HashTable object** named `table`.
+
+---
+
+### 1. Insert Key-Value Pairs
+```
+table.put("Apple", 10);
+table.put("Banana", 20);
+table.put("Cherry", 30);
+```
+- Adds three entries:  
+  - `"Apple" → 10`  
+  - `"Banana" → 20`  
+  - `"Cherry" → 30`
+
+---
+
+### 2. Check for Key
+```
+<PRINTLN>("Contains key 'Banana'? " + table.containsKey("Banana"));
+```
+- Checks if `"Banana"` exists.  
+- Output: `Contains key 'Banana'? true`
+
+---
+
+### 3. Check for Value
+```
+<PRINTLN>("Contains value 30? " + table.containsValue(30));
+```
+- Checks if value `30` exists.  
+- Output: `Contains value 30? true`
+
+---
+
+### 4. Clone the Hashtable
+```
+OJ7Lib.J7HashTable copy = table.clone();
+<PRINTLN>("Clone contains key 'Apple'? " + copy.containsKey("Apple"));
+```
+- Creates a copy of the hashtable.  
+- Checks if `"Apple"` exists in the clone.  
+- Output: `Clone contains key 'Apple'? true`
+
+---
+
+### 5. Compare Equality
+```
+<PRINTLN>("Table equals copy? " + table.equals(copy));
+```
+- Compares `table` and `copy`.  
+- Output: `Table equals copy? true`
+
+---
+
+### 6. Clear the Hashtable
+```
+table.clear();
+<PRINTLN>("Size after clear: " + table.size());
+```
+- Removes all entries from `table`.  
+- Output: `Size after clear: 0`
+
+✨ Dotweb5.0 J7HashTable Example
+
+<PRINTLN>("-------------------------------------------------------");
+<PRINTLN>("                   HASHTABLE                           ");
+<PRINTLN>("-------------------------------------------------------");
+
+OJ7Lib.J7HashTable table = new OJ7Lib.J7HashTable();
+
+    // -------------------------------
+    // Insert key-value pairs
+    // -------------------------------
+    table.put("Apple", 10);
+    table.put("Banana", 20);
+    table.put("Cherry", 30);
+
+    // -------------------------------
+    // containsKey()
+    // -------------------------------
+    <PRINTLN>("Contains key 'Banana'? " + table.containsKey("Banana")); // true
+
+    // -------------------------------
+    // containsValue()
+    // -------------------------------
+    <PRINTLN>("Contains value 30? " + table.containsValue(30)); // true
+
+    // -------------------------------
+    // clone()
+    // -------------------------------
+    OJ7Lib.J7HashTable copy = table.clone();
+    <PRINTLN>("Clone contains key 'Apple'? " + copy.containsKey("Apple")); // true
+
+    // -------------------------------
+    // equals()
+    // -------------------------------
+    <PRINTLN>("Table equals copy? " + table.equals(copy)); // true
+
+    // -------------------------------
+    // clear()
+    // -------------------------------
+    table.clear();
+    <PRINTLN>("Size after clear: " + table.size()); // 0
+
+---
+
+# ✅ Final Output (Step by Step)
+
+```
+-------------------------------------------------------
+              HASHTABLE                              
+-------------------------------------------------------
+Contains key 'Banana'? true
+Contains value 30? true
+Clone contains key 'Apple'? true
+Table equals copy? true
+Size after clear: 0
+```
+
+---
+
+# 🎯 Conclusion
+
+- The **J7Hashtable program** demonstrates key operations: **put, containsKey, containsValue, clone, equals, clear, size**.  
+- It shows how a hashtable manages **fast lookups** using keys and supports cloning and equality checks.  
+- After clearing, the table becomes empty, confirming the **dynamic nature** of hashtables.  
+
+---
 
 ===============================================================================================
 
