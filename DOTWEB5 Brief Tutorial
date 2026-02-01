@@ -8308,6 +8308,131 @@ and supports atomic operations with fine‑grained concurrency.
                UNIT - 8 : WNOSQLDb connection with Dotweb5.0 Programming Language
 ================================================================================================
 
+---
+
+# 📘 What is Wnosql Database?
+
+- **Wnosql Database (Wnosqldb)** appears to be a **custom Dotweb5.0 NoSQL database system**.  
+- It follows the **NoSQL paradigm**: storing data in flexible formats (documents, key–value, columnar, graph) rather than rigid relational tables.  
+- Designed for **scalability, speed, and handling large volumes of unstructured/semi‑structured data**.  
+
+---
+
+# 🔑 Why is Wnosql DB considered advanced compared to PostgreSQL?
+
+- **PostgreSQL** is a **relational database (RDBMS)**:  
+  - Uses structured tables, rows, and columns.  
+  - Enforces strict schemas and ACID transactions.  
+  - Best for structured, relational data.  
+
+- **Wnosql DB** (like other NoSQL systems):  
+  - Schema‑less → flexible data storage.  
+  - Optimized for **horizontal scaling** (distributing across many servers).  
+  - Handles **big data workloads** and **real‑time queries** better.  
+  - Supports **high concurrency** without locking entire tables.  
+
+👉 In short: PostgreSQL is excellent for structured relational data, while Wnosql DB is advanced for **massive, distributed, unstructured data**.  
+
+---
+
+# 📊 How much volume can Wnosql DB store?
+
+- NoSQL systems (including Wnosql DB) are designed to handle **terabytes to petabytes of data**.  
+- Unlike PostgreSQL, which scales vertically (one server), Wnosql DB scales **horizontally** across clusters.  
+- In practice, storage is limited only by **infrastructure capacity** (number of nodes, disks, and distributed architecture).  
+
+---
+
+# ⚙️ Advantages of Wnosql DB
+
+- **Scalability** → Handles massive datasets by distributing across servers.  
+- **Flexibility** → Schema‑less, supports varied data formats.  
+- **Performance** → Faster reads/writes for big data workloads.  
+- **High Availability** → Replication and fault tolerance built in.  
+- **Concurrency** → Multiple users can query/update simultaneously without bottlenecks.  
+
+---
+
+# ⚠️ Disadvantages of Wnosql DB
+
+- **Consistency trade‑offs** → May sacrifice strict ACID guarantees for speed (uses eventual consistency).  
+- **Complex queries** → Lacks advanced SQL joins and relational features.  
+- **Learning curve** → Requires new query languages and paradigms.  
+- **Tooling ecosystem** → Smaller compared to mature RDBMS like PostgreSQL.  
+
+---
+
+# 👤 Who invented Wnosql DB?
+
+- The **NoSQL movement** originated around **2009**, popularized by companies like **Facebook, Google, Amazon** for handling big data.  
+- Specific **Wnosql DB** in Dotweb5.0 appears to be a **custom implementation** (likely by the Dotweb5.0 framework authors, e.g., “wilmixjemin.j” as referenced in your program).  
+- It is not a mainstream database like MongoDB or Cassandra, but a **specialized Dotweb5.0 library**.  
+
+---
+
+# ✨ Dotweb5.0 with  Wnosql DB Program (Your Example)
+
+```
+<WEB>
+<USE> Security; // load security packages
+<USE> <OJ7UTIL>;
+<USE> fx;
+<WNOSQL>
+
+<PACK> Program8
+{
+   <CLASS> Prog
+   {
+      public void main()
+      {
+          // Read file path
+          String fpath = fx.FileSequentialAccess.Read("filepath.txt");
+
+          // Connect to Wnosql DB
+          String g = WDBASQL.WDBASQLS("datastores", "USEDATABASE", "dbpwds", fpath);
+
+          // Authenticate user
+          String t = WDBASQL.WDBASQLS("dbuser", "dbpwds", 1, "wilmix78", "wilmix78", 1, 5, g);
+
+          // Query execution
+          String qh2 = "SelectAll from datastorehg 4 to 3004 , 1 to 1 ?= A By 1 1 : {0} : {0} :{0}";
+          wdbaconn.WDBAQUERY(qh2);
+
+          // Print timestamps
+          DateTime aDate = DateTime.Now;
+          <PRINTLN>(aDate.ToString("HH:mm:ss"));
+
+          // Fetch results into ArrayList
+          <OJ7UTIL>.ArrayList ar = WDBALIB.WDBAQUERY(qh2, t);
+          <PRINTLN>(ar);
+
+          DateTime aDate1 = DateTime.Now;
+          <PRINTLN>(aDate1.ToString("HH:mm:ss"));
+      }
+   }
+}
+```
+
+---
+
+# 🎯 What This Program Does
+
+1. **Reads a file path** for DB connection.  
+2. **Connects to Wnosql DB** using credentials.  
+3. **Executes a query** (`SelectAll from datastorehg`).  
+4. **Prints timestamps** before and after query execution.  
+5. **Stores results in ArrayList** and prints them.  
+
+---
+
+✅ In summary:  
+- **Wnosql DB** is a Dotweb5.0 NoSQL database designed for **scalable, flexible, big data storage**.  
+- It is considered advanced compared to PostgreSQL because of **horizontal scaling and schema‑less design**.  
+- It can store **massive volumes (terabytes to petabytes)** depending on infrastructure.  
+- Invented as part of the **NoSQL movement (2009)**, with Dotweb5.0’s **Wnosql DB** being a custom implementation.  
+
+---
+
 ===============================================================================================
 
 Note: This  Tutorial  website  is  under construction
