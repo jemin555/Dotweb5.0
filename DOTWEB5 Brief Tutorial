@@ -8684,6 +8684,7 @@ Decrypt= wilmix is going ,  cat is going ,  dog is chasing cat
 
                      Exception  in  Dotweb5.0 
 ==================================================================================================
+
 ## 🔎 Define Exception
 
 **An exception is an event that disrupts the normal flow of a program during execution. 
@@ -8695,7 +8696,7 @@ each serving different purposes in handling abnormal situations.**
 
 ## 🔎 What is an Exception?
 - **Definition:** An exception is a runtime event that signals an error or unexpected condition in a program.  
-- **Purpose:** Instead of crashing, programs can *catch* exceptions and handle them gracefully using constructs like `<TRY>`, `<CATCH>`, and `<Finally>` (in DotWeb5.0 or `try-catch-finally` in Java/C#).  
+- **Purpose:** Instead of crashing, programs can *catch* exceptions and handle them gracefully using constructs like `<TRY>`, `<CATCH>`, and `<Finally>`   
 - **Examples of causes:**
   - Accessing invalid array indices  
   - Dividing by zero  
@@ -8808,9 +8809,9 @@ each serving different purposes in handling abnormal situations.**
 - This will throw an **`ArrayIndexOutOfBoundsException`**.  
 - Since you have a `<CATCH> (Exception e)` block, the exception will be caught, and the program will print:
 
-```
-Error.... java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 3
-```
+Error.... System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at exceptionexample.Program.Main(String[] args)
+
 
 ### 📝 Conclusion
 - **Compilation:** ✅ No error.  
@@ -8819,6 +8820,7 @@ Error.... java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for l
 
 
 ### 🔎 What happens in my DotWeb5.0 program
+
 - The array `myNumbers` has **3 elements**: `{15, 21, 123}`.  
 - You are trying to access `myNumbers[10]`.  
 - Since index `10` does not exist (valid indices are `0, 1, 2`), this will cause an **exception at runtime**.  
