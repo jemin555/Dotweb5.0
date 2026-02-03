@@ -9416,9 +9416,128 @@ wilmix
 - You will learn more about OakJava7’s compiler and its applications in **web application samples**.  
 - OakJava7 complier is  used with Dotweb5.0 compiler.
 
-
-
 **Note:** You will learn more about this compiler and its usage in web application samples.  
+
+=================================================
+
+
+# ✨ Program: Operator Overloading in Dotweb5.0
+
+```dotweb5
+
+# Operatoroverload.web
+
+<WEB>
+
+<PACK> OperatorOverloadapp {
+
+  <CLASS> OFFICE {
+
+      private double length;   // Length of an OFFICE
+      private double breadth;  // Breadth of an OFFICE
+      private double height;   // Height of an OFFICE
+
+      public double getVolume() {
+         return length * breadth * height;
+      }
+
+      public void setLength(double len) {
+         length = len;
+      }
+
+      public void setBreadth(double bre) {
+         breadth = bre;
+      }
+
+      public void setHeight(double hei) {
+         height = hei;
+      }
+
+      // Overload + operator to add two OFFICE objects.
+      public static OFFICE operator+ (OFFICE b, OFFICE c) {
+         OFFICE OFFICE = new OFFICE();
+         OFFICE.length = b.length + c.length;
+         OFFICE.breadth = b.breadth + c.breadth;
+         OFFICE.height = b.height + c.height;
+         return OFFICE;
+      }
+   }
+
+   <CLASS> Tester {
+
+      public void main() {
+
+         OFFICE OFFICE1 = new OFFICE();   // Declare OFFICE1
+         OFFICE OFFICE2 = new OFFICE();   // Declare OFFICE2
+         OFFICE OFFICE3 = new OFFICE();   // Declare OFFICE3
+
+         double volume = 0.0;    // Store the volume
+
+         // OFFICE 1 specification
+         OFFICE1.setLength(7.0);
+         OFFICE1.setBreadth(50.0);
+         OFFICE1.setHeight(15.0);
+
+         // OFFICE 2 specification
+         OFFICE2.setLength(12.0);
+         OFFICE2.setBreadth(13.0);
+         OFFICE2.setHeight(10.0);
+
+         // Volume of OFFICE 1
+         volume = OFFICE1.getVolume();
+         <PRINTLN>("Volume of OFFICE1 : {0}", volume);
+
+         // Volume of OFFICE 2
+         volume = OFFICE2.getVolume();
+         <PRINTLN>("Volume of OFFICE2 : {0}", volume);
+
+         // Add two OFFICE objects using overloaded +
+         OFFICE3 = OFFICE1 + OFFICE2;
+
+         // Volume of OFFICE 3
+         volume = OFFICE3.getVolume();
+         <PRINTLN>("Volume of OFFICE3 : {0}", volume);
+
+         Console.ReadKey();
+      }
+   }
+
+}
+```
+
+---
+
+# 📄 Output Headings and Results
+
+### Volume of OFFICE1
+```
+Volume of OFFICE1 : 5250.0
+```
+
+### Volume of OFFICE2
+```
+Volume of OFFICE2 : 1560.0
+```
+
+### Volume of OFFICE3 (OFFICE1 + OFFICE2)
+```
+Volume of OFFICE3 : 12285.0
+```
+
+---
+
+# 🎯 Explanation
+- **OFFICE class** defines dimensions (`length`, `breadth`, `height`) and calculates volume.  
+- The **operator+** method is overloaded to allow adding two OFFICE objects by summing their dimensions.  
+- In the **Tester class**, two OFFICE objects are created and initialized.  
+- Their volumes are calculated and displayed.  
+- Then, the two OFFICE objects are added using the overloaded `+` operator, producing a new OFFICE object (`OFFICE3`).  
+- Finally, the volume of the combined OFFICE is printed.  
+
+
+
+
+
 ==================================================================================================
 
 
