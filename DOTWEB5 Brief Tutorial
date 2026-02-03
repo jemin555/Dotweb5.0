@@ -8501,8 +8501,82 @@ This makes it more scalable and efficient for handling terabytes or more, depend
 ```
 bag
 ```
+========================================================
 Next Dotweb5 Program about  file is given below
 
+# Java7File.web
+
+<WEB>
+
+<USE> fx;
+
+<PACK> ConsoleApp289
+
+{
+
+<CLASS> Java7File
+
+    {
+
+           public void main()
+
+        {
+
+            
+
+            //Print the detail  of  the  file wilmix.txt
+
+            <PRINTLN>("Print the  detail  of  file  wilmix.txt");
+
+            FileDetail.Print("wilmix.txt");
+
+            <PRINTLN>("----------------------");
+
+            <PRINTLN>("Write  a  String  and  Print charater by  character  from  a file wilmix2.txt  using FileStream");
+
+            // write  the  String  'he  is studying mathematics' in  the file wilmix2.txt using FileStream
+
+            FileStream.Write("wilmix2.txt", "he  is  studying  mathematics");
+
+            // read  character  by  character   from  a   file  wilmix2.txt using FileStream
+
+            for (int i=0;i< FileStream.Read("wilmix2.txt").size();i++)
+
+            Console.Write("" + FileStream.Read("wilmix2.txt").get(i).ToString());
+
+            <PRINTLN>("");
+
+             <PRINTLN>("----------------------");
+
+            
+
+            <PRINTLN>("Write  a  String  and  Print charater by  character  from  a file wilmix3.txt using Buffered ");
+
+            // write  the  String  'horse  is  going now. now  it  is  not  a  good  time' in  the file wilmix3.txt
+
+            Buffered.Write("wilmix3.txt", "horse  is  going now. now  it  is  not  a  good  time");
+
+            // 
+
+            <PRINTLN>("" + Buffered.Read("wilmix3.txt"));
+
+            <PRINTLN>("----------------------");
+
+            //read  a  string  from  file  wilmix3.txt  and  split the  string to  tokens and  get  the  2nd token  from  the  string
+
+            <PRINTLN>("read  a  string  from  file  wilmix3.txt  and  split the  string to  tokens and  get  the  2nd token  from  the  string");
+
+            <PRINTLN>("" + StringTokens.Split("wilmix3.txt").get(2));
+
+           // Console.ReadKey();
+
+ 
+
+        }
+
+    }
+
+}
 
 ---
 
