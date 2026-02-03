@@ -8681,7 +8681,178 @@ going
 
 ---
 
+Next 3rd File Manipulation Dotweb5.0 Program is given below.....
 
+
+# FileManipulation.web
+
+
+<WEB>
+
+<USE> fx;
+
+ //load  file  packages using java7.0 libraries
+
+<PACK> Program2file
+
+{
+
+  
+
+    <CLASS> Prog
+
+   {
+
+        public void main()
+
+{
+
+      
+
+                // copy  file contents  from one  file to  another file
+
+            CopyFile.call("out7.txt", "out71.txt");
+
+                  // create  a  directory  name  wilmix
+
+            CreateDir.call("wilmix");
+
+                  
+
+               // Randomly write to file wilmix1.txt  with  data [iam going now] from location 11 
+
+            FileRandomAccess.WriteFile("wilmix1.txt", "iam going now..", 11);
+
+                   // Randomly read from file wilmix1.txt from  position 1 with size 10
+
+            String sop = FileRandomAccess.ReadFile("wilmix1.txt", 1, 10);
+
+// print the  file contents
+
+<PRINTLN> ("RandomAccess=" + sop);
+
+                 
+
+                //Write to  file wilmix2.txt with  data -> weldone today 
+
+            FileSequentialAccess.Write("wilmix2.txt", "weldone  today");
+
+//Sequentilly Read from  file wilmix2.txt   
+
+            <PRINTLN>("SequentialAccess=" + FileSequentialAccess.Read("wilmix2.txt"));
+
+            <PRINTLN>("");
+
+            <PRINTLN>("");
+
+                 // Read  Directory  contents
+
+            ReadDir.call("C:\\test");
+
+            String sop1 = "wilmix  is  good";
+
+               // count no of  words  in  a  given string sop1
+
+            <PRINTLN>("Wordcount=" + WordCount.wordcount(sop1));
+
+           // Console.ReadKey();
+
+}
+
+      
+
+   }
+
+}
+
+
+
+---
+
+# ✨ Explanation of Program2file (File Manipulation Demo)
+
+### Program Overview
+
+This program demonstrates several **file manipulation techniques** using dotweb5.0 with Java7.0 libraries. 
+It covers copying files, creating directories, random and sequential file access, reading directory contents,
+and counting words in a string.
+
+---
+
+## 🔹 Step 1: Copy File Contents
+```Dotweb5
+CopyFile.call("out7.txt", "out71.txt");
+```
+- Copies the contents of `out7.txt` into a new file `out71.txt`.
+
+---
+
+## 🔹 Step 2: Create a Directory
+```Dotweb5
+CreateDir.call("wilmix");
+```
+- Creates a directory named **wilmix**.
+
+---
+
+## 🔹 Step 3: Random File Access
+```Dotweb5
+FileRandomAccess.WriteFile("wilmix1.txt", "iam going now..", 11);
+String sop = FileRandomAccess.ReadFile("wilmix1.txt", 1, 10);
+<PRINTLN>("RandomAccess=" + sop);
+```
+- Writes the string `"iam going now.."` into `wilmix1.txt` starting at position 11.  
+- Reads 10 characters from position 1 in the same file.  
+- Prints the result with the heading **RandomAccess**.
+
+---
+
+## 🔹 Step 4: Sequential File Access
+```Dotweb5
+FileSequentialAccess.Write("wilmix2.txt", "weldone today");
+<PRINTLN>("SequentialAccess=" + FileSequentialAccess.Read("wilmix2.txt"));
+```
+- Writes `"weldone today"` into `wilmix2.txt`.  
+- Reads the file sequentially and prints the result with the heading **SequentialAccess**.
+
+---
+
+## 🔹 Step 5: Read Directory Contents
+```Dotweb5
+ReadDir.call("C:\\test");
+```
+- Reads and displays the contents of the directory `C:\test`.
+
+---
+
+## 🔹 Step 6: Word Count in a String
+```Dotweb5
+String sop1 = "wilmix is good";
+<PRINTLN>("Wordcount=" + WordCount.wordcount(sop1));
+```
+- Takes the string `"wilmix is good"`.  
+- Counts the number of words in the string.  
+- Prints the result with the heading **Wordcount**.
+
+---
+
+# 📄 Expected Output 
+
+Write to File Sucessfullywilmix1.txt
+RandomAccess=
+Write to File SuccessFullywilmix2.txt
+SequentialAccess= weldone  today
+
+
+orginal
+out.txt
+Params.txt
+ScrollServer1.0.3-EnterpriseEditionv.1
+ScrollServer1.0.3-EnterpriseEditionv.1.jar
+Wordcount=3
+```
+
+---
 
 
 =====================================================================================================
